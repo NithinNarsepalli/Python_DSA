@@ -41,3 +41,13 @@ def monotonic_array(array):
             return False
       #if all the conditions are satified the we return true as it is a monotonic array
       return True
+    
+#Method 2:- This aims to the optimization of the code
+def MonotonicArray(array):
+  increasing=decreasing=True
+  for i in range(len(array)-1):
+    if array[i]>array[i+1]:
+      decreasing = False
+    if array[i]<array[i+1]:
+      increasing = False
+  return increasing or decreasing
